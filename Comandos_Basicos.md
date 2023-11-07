@@ -30,13 +30,19 @@ ros2 run turtlesim turtlesim_node --ros-args --remap __node:=my_turtle
 ---
 
 Verificar topicos y a la vez el tipo de mensaje
+```
 ros2 topic list -t
+```
 
 Verificar los datos entregados por los topicos
+```
 ros2 topic echo <topic_name>
+```
 
 Verificar el tipo de mensaje que envía 
+```
 ros2 interface show <msg_type>
+```
 
 Para enviar un mensaje 
 ```
@@ -45,26 +51,41 @@ ros2 topic pub <loop> <topic_name> <msg_type> '<args>'
 Opcional se puede usar <--once> para que solo se repita una vez
 Opcional se puede usar <--rate 1> para que se repita cada 1Hz
 
-Ejemplo de '<args>' = "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.8}}"
+> Ejemplo de '<args>' = "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.8}}"
 ```
 
-Para identificar la periocidad con la que se publica un tópico
+Para identificar la periciad con la que se publica un tópico
 
+```
 ros2 topic hz <topic_name>
+```
 ---
+### Servicios
+
 Para identificar el tipo de servicio se puede usar
+```
 ros2 service type <service_name>
-##Si se quiere encontrar un tipo especifico de servicio se puede usar
+> Si se quiere encontrar un tipo especifico de servicio se puede usar>
+
 ros2 service find <type_name>	
-##Ejemplo de <type_name> = std_srvs/srv/Empty
+> Ejemplo de <type_name> = std_srvs/srv/Empty
+```
 
 Para identificar la estructura de un servicio
+
+```
 ros2 interface show <type_name>
+```
 
 Para llamar a un servicio se usa
+```
 ros2 service call <service_name> <service_type> <arguments>
+```
 
 ---
+### Parametros
+
+Los parametros son los valores de configuración de un nodo  
 
 Para identificar el tipo de parametros
 ros2 param get <node_name> <parameter_name>
