@@ -17,4 +17,4 @@ En cuanto a los nodos estos en general tienen dos tipos de funcionamiento:
 - Ejecución interactiva:  En la que un nodo se ejecuta en un ciclo definido, es decir que mediante una frecuencia de funcionamiento se acciona el programa.
 
 - Ejecución orientada en eventos: Mediante esta un nodo se ejecuta o recibe información en el momento en el que un evento ocurra, dicho evento puede poseer o no un tiempo definido.
-[comandos basicos](comandos-basicos.md), 
+[comandos basicos](comandos basicos.md), 
