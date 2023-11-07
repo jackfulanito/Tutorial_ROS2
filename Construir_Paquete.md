@@ -4,18 +4,8 @@ Para trabajar con ROS2 se debe de primero iniciar un entorno de trabajo, para es
 
 sudo apt install python3-colcon-common-extensions
 
-Luego mediante comandos se realiza la creación de carpetas que trabajen en dicho entorno hasta crear algo similar a lo siguiete:
-.
-├── build
-├── install
-├── log
-└── src
-    └── examples
-        ├── CONTRIBUTING.md
-        ├── LICENSE
-        ├── rclcpp
-        ├── rclpy
-        └── README.md
+Luego mediante comandos se realiza la creación de carpetas que trabajen en dicho entorno hasta crear algo similar a lo siguiente:
+![[Arreglo de carpetas.png]]
 
 Los comandos necesarios serían
 
