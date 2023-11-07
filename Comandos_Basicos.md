@@ -1,7 +1,5 @@
 # Comandos básicos
 
-
-
 comandos de lista de ROS2.
 ```
 ros2 node list
