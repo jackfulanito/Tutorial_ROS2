@@ -18,4 +18,6 @@ En cuanto a los nodos estos en general tienen dos tipos de funcionamiento:
 
 - Ejecución orientada en eventos: Mediante esta un nodo se ejecuta o recibe información en el momento en el que un evento ocurra, dicho evento puede poseer o no un tiempo definido.
 
-Los nodos en ROS 
+Los nodos en ROS realizan el enlace mediante un nodo maestro, el cual organiza cuales son los nodos a comunicar esto es mejorado en ROS2 mediante un control descentralizado basado en una capa de comunicación de Data Distribution Service (DDS) y como centro de ROS 2 se encuentra Ros Client Library (rcl) cuyo código es manejado mediante las librerías rclc y rclpy de de C++ y Python respectivamente, es mediante esta que se generan los códigos de creación de nodos.
+
+En el caso de esta guía básica se utilizará la versión de ROS2 Humble en Ubuntu 22.04.
