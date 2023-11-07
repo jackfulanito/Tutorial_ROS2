@@ -31,10 +31,13 @@ git clone https://github.com/ros2/examples src/examples -b humble
 ```
 >No es necesaria una creación de src si se usará el ejemplo
 
-Luego estando en una terminal de la carpeta ros2_ws se realiza
-colcon build --symlink-install
+Luego estando en una terminal de la carpeta ros2_ws se realizar: 
 
-Finalemente, al realizar todo se de hacer el source de la carpeta mediante
+```
+colcon build --symlink-install
+```
+
+Finalmente, al realizar todo se de hacer el source de la carpeta mediante
 source install/setup.bash
 
 y se puede probar una demo mediante los comandos
