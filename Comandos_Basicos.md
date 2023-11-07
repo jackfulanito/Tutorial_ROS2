@@ -18,7 +18,7 @@ ros2 service info <node_name>
 ros2 action info <node_name>
 ```
 
-Iniciar un paquet,
+Iniciar un paquete
 ```
 ros2 run <package_name> <executable_name>
 ```
@@ -29,7 +29,7 @@ ros2 run turtlesim turtlesim_node --ros-args --remap __node:=my_turtle
 ```
 
 ---
-Tópicos y mensajes.
+### Tópicos y mensajes.
 
 Verificar tópicos y a la vez el tipo de mensaje.
 ```
@@ -102,27 +102,31 @@ Si se desea cambiar los parámetros se puede utilizar
 ros2 param set <node_name> <parameter_name> <value>
 ```
 
-Para cambiar los parametros en el momento se usa
+Para cambiar los parámetros en el momento se usa
 ```
 ros2 param set <node_name> <parameter_name> <value>
->Solo se cambian para el uso actual
+> Solo se cambian para el uso actual
 ```
 
-Para guardar el estado actual de los parametros
+Para guardar el estado actual de los parámetros
 ```
-ros2 param dump /turtlesim > turtlesim.yam
-```l 
+ros2 param dump /turtlesim > turtlesim.yaml 
+```
 
-Para colocar los parametros desde un archivo
+Para colocar los parámetros desde un archivo
 ```
 ros2 param load <node_name> <parameter_file>
-##Los parametros de lectura solo pueden ser modificados al iniciar
+> Los parametros de lectura solo pueden ser modificados al iniciar
 ```
 
-Para iniciar un nodo con los parametros dados
+Para iniciar un nodo con los parámetros dados
+```
 ros2 run <package_name> <executable_name> --ros-args --params-file <file_name>
--------------------------------------------------------------------------------
-Las acciones son similares a los servicios pero pueden cancelarce y mantien un monitoreo constante. Tienen un funcionamiento similar al de los publicadores-subscriptores, pues consisten en un goal, un feedback y un resultado. Es para tareas que demoren un tiempo
+```
+---
+### Acciones
+
+Las acciones son similares a los servicios pero pueden cancelarse y mantiene un monitoreo constante. Tienen un funcionamiento similar al de los publicadores-subscriptores, pues consisten en un goal, un feedback y un resultado. Es para tareas que demoren un tiempo
 
 
 Para identificar el tipo de acción 
@@ -130,17 +134,23 @@ ros2 action list -t
 ##necesario el contenido entre [...] cuando se quiera llamar a la acción
 
 Para conocer el formato de escritura se utiliza
+```
 ros2 interface show [...]
-##Su estructura se compone de la siguiente manera
-##tipo de dato y nombre del goal
-##tipo de dato y nombre del result
-##tipo de dato y nombre del feedback
 
-Para enviar una acción se utiliza
+> Su estructura se compone de la siguiente manera
+> tipo de dato y nombre del goal
+> tipo de dato y nombre del result
+> tipo de dato y nombre del feedback
+```
+
+Para enviar una acción se utiliza.
+
+```
 ros2 action send_goal <action_name> <action_type> <values>
-##con values en formato yaml
-##ejemplo: ros2 action send_goal /turtle1/rotate_absolute turtlesim/action/RotateAbsolute "{theta: 1.57}"
-##--feedback al final de la linea para que se vaya actualizando en el tiempo
+> con values en formato yaml
+> ejemplo: ros2 action send_goal /turtle1/rotate_absolute turtlesim/action/RotateAbsolute "{theta: 1.57}"
+> --feedback al final de la linea para que se vaya actualizando en el tiempo
+```
 
 
 
