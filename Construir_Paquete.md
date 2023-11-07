@@ -38,25 +38,37 @@ colcon build --symlink-install
 ```
 
 Finalmente, al realizar todo se de hacer el source de la carpeta mediante
+```
 source install/setup.bash
+```
 
 y se puede probar una demo mediante los comandos
+```
 ros2 run examples_rclcpp_minimal_subscriber subscriber_member_function
 
 ros2 run examples_rclcpp_minimal_publisher publisher_member_function
+```
 
 con los cuales se puede iniciar un subscriptor y un publicador.
 
-Realizados todos estos pasos se puede proceder a realizar un nuevo paquete mediante el comando 
-ros2 pkg create <nombre_paquete>
+Realizados todos estos pasos se puede proceder a realizar un nuevo paquete mediante el comando.
 
-para realizar un segimiento del paquete realizado existen los comandos
+```
+ros2 pkg create <nombre_paquete>
+```
+
+para realizar un seguimiento del paquete realizado existen los comandos
+```
 echo "source /usr/share/colcon_cd/function/colcon_cd.sh" >> ~/.bashrc
 echo "export _colcon_cd_root=/opt/ros/humble/" >> ~/.bashrc
+```
 
 Para activar el autocompletado
+```
 echo "source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash" >> ~/.bashrc
+```
 
 si no ser requiere de hacer un build a un paquete se puede colocar un archivo COLCON_IGNORE en el directorio y no se indexará
 
-si no se requiere de configurar y hacer tests en paquetes CMake se puede usar --cmake-args -DBUILD_TESTING=0.
+si no se requiere de configurar y hacer tests en paquetes CMake se puede usar 
+> --cmake-args -DBUILD_TESTING=0.
