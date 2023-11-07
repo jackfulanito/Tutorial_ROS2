@@ -5,27 +5,8 @@
 Un paquete en ros2 puede contener tanto una configuración para c++ o para python y utiliza a ament como como constructor del sistema y a colcon como herramienta de construcción.
 Una carpeta comun que contenga programas en python y c++ se vería de la siguiente forma.
 
-workspace_folder/
-  |_src/
-     |_cpp_package_1/
-     |   |_CMakeLists.txt
-     |   |_include/cpp_package_1/
-     |   |_package.xml
-     |   |_src/
-     |
-     |_py_package_1/
-     |   |_package.xml
-     |   |_resource/py_package_1
-     |   |_setup.cfg
-     |   |_setup.py
-     |   |_py_package_1/
-     | ...
-     |_cpp_package_n/
-        |_CMakeLists.txt
-        |_include/cpp_package_n/
-        |_package.xml
-        |_src/
-        
+![espacio_de_trabajo.png](Imagenes/espacio_de_trabajo.png)
+
 Para esto se realiza los siguiente comandos:
 
 Para C++:
@@ -57,5 +38,5 @@ source /opt/ros/humble/setup.bash
 source install/local_setup.bash
 ```
 
-![[EJEMPLO2.png]]
+![EJEMPLO2.png](Imagenes/EJEMPLO2.png)
 

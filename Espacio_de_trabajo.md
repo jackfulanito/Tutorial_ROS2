@@ -33,8 +33,9 @@ rosdep install -i --from-path src --rosdistro humble -y
 ```
 
 En el caso de no tener alguna dependencia se debe de instalar en home y no en el espacio de trabajo, como ejemplo se puede ver la imagen "error1"
-![[error1.png]]
-finalmente se debe de realizar 
+
+![error1.png](Imagenes/error1.png)
+Finalmente se debe de realizar 
 ```
 colcon build
 ```
@@ -51,4 +52,6 @@ Para crear un "overlay" se debe de utilizar un terminal diferente en el cual se 
 source install/local_setup.bash
 ```
 
-con esto si se modifica alguno de los paquetes en el overlay no debe de afectar al underlay, como se puede ver en la imagen ejemplo1![[EJEMPLO1.png]]
+con esto si se modifica alguno de los paquetes en el overlay no debe de afectar al underlay, como se puede ver en la imagen ejemplo1
+
+![EJEMPLO1.png](Imagenes/EJEMPLO1.png)
