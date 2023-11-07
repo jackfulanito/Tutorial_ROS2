@@ -1,7 +1,8 @@
 # Comandos básicos
 
-comandos de lista de ROS2
 
+
+comandos de lista de ROS2.
 ```
 ros2 node list
 ros2 topic list
@@ -9,7 +10,7 @@ ros2 service list
 ros2 action list
 ```
 
-Comando de información de ROS2
+Comando de información de ROS.
 ```
 ros2 node info <node_name>
 ros2 topic info <node_name>
@@ -17,34 +18,35 @@ ros2 service info <node_name>
 ros2 action info <node_name>
 ```
 
-Iniciar un paquete
+Iniciar un paquet,
 ```
 ros2 run <package_name> <executable_name>
 ```
 
-Hacer un re-mapeo de los nodos 
+Hacer un re-mapeo de los nodos.
 ```
 ros2 run turtlesim turtlesim_node --ros-args --remap __node:=my_turtle
 ```
 
 ---
+Tópicos y mensajes.
 
-Verificar topicos y a la vez el tipo de mensaje
+Verificar tópicos y a la vez el tipo de mensaje.
 ```
 ros2 topic list -t
 ```
 
-Verificar los datos entregados por los topicos
+Verificar los datos entregados por los topicos.
 ```
 ros2 topic echo <topic_name>
 ```
 
-Verificar el tipo de mensaje que envía 
+Verificar el tipo de mensaje que envía.
 ```
 ros2 interface show <msg_type>
 ```
 
-Para enviar un mensaje 
+Para enviar un mensaje.
 ```
 ros2 topic pub <loop> <topic_name> <msg_type> '<args>'
 
@@ -54,15 +56,14 @@ Opcional se puede usar <--rate 1> para que se repita cada 1Hz
 > Ejemplo de '<args>' = "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.8}}"
 ```
 
-Para identificar la periciad con la que se publica un tópico
-
+Para identificar la periciad con la que se publica un tópico.
 ```
 ros2 topic hz <topic_name>
 ```
 ---
 ### Servicios
 
-Para identificar el tipo de servicio se puede usar
+Para identificar el tipo de servicio se puede usar.
 ```
 ros2 service type <service_name>
 > Si se quiere encontrar un tipo especifico de servicio se puede usar>
@@ -71,41 +72,52 @@ ros2 service find <type_name>
 > Ejemplo de <type_name> = std_srvs/srv/Empty
 ```
 
-Para identificar la estructura de un servicio
-
+Para identificar la estructura de un servicio.
 ```
 ros2 interface show <type_name>
 ```
 
-Para llamar a un servicio se usa
+Para llamar a un servicio se usa.
 ```
 ros2 service call <service_name> <service_type> <arguments>
 ```
 
 ---
-### Parametros
+### Parámetros
 
-Los parametros son los valores de configuración de un nodo  
+Los parámetros son los valores de configuración de un nodo.
 
-Para identificar el tipo de parametros
+Para identificar el tipo de.
+```
 ros2 param get <node_name> <parameter_name>
+```
 
-Para identificar todos los parametro de un nodo
-ros2 param dump <node_name>	
+Para identificar todos los parámetro de un nodo.
+```
+ros2 param dump <node_name>
+```
 
-Si se desea cambiar los parametros se puede utilizar
+Si se desea cambiar los parámetros se puede utilizar
+```
 ros2 param set <node_name> <parameter_name> <value>
+```
 
 Para cambiar los parametros en el momento se usa
+```
 ros2 param set <node_name> <parameter_name> <value>
-##Solo se cambian para el uso actual
+>Solo se cambian para el uso actual
+```
 
 Para guardar el estado actual de los parametros
-ros2 param dump /turtlesim > turtlesim.yaml
+```
+ros2 param dump /turtlesim > turtlesim.yam
+```l 
 
 Para colocar los parametros desde un archivo
+```
 ros2 param load <node_name> <parameter_file>
 ##Los parametros de lectura solo pueden ser modificados al iniciar
+```
 
 Para iniciar un nodo con los parametros dados
 ros2 run <package_name> <executable_name> --ros-args --params-file <file_name>
